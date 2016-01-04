@@ -1,5 +1,5 @@
-Scotch Box
-==========
+Scotch MultiBox
+===============
 
 ## Check out the official docs at: [box.scotch.io][16]
 ## [Read the getting started article](https://scotch.io/bar-talk/introducing-scotch-box-a-vagrant-lamp-stack-that-just-works)
@@ -96,6 +96,7 @@ So that's why I decided to build a Vagrant LAMP Box. The box is prepackaged and 
 * Download and Install [Vagrant][3]
 * Download and Install [VirtualBox][4]
 * Clone the Scotch Box [GitHub Repository](https://github.com/scotch-io/scotch-box)
+* Run ``` vagrant plugin install vagrant-hostmanager ```
 * Run ``` vagrant up ```
 * Access Your Project at  [http://192.168.33.10/][14]
 
