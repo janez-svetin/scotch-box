@@ -3,8 +3,13 @@
 require 'yaml'
 CONFSBOX = YAML.load(File.open(File.join(File.dirname(__FILE__), "Scotchbox.yaml"), File::RDONLY).read)
 ENV['VAGRANT_DEFAULT_PROVIDER'] = CONFSBOX["provider"] ||= "virtualbox"
+FALIASES = File.join(File.dirname(__FILE__), "aliases")
 
 Vagrant.configure("2") do |config|
+
+    if File.exists? FALIASES then
+        config.vm.provision "file", source: FALIASES, destination: "~/.bash_aliases"
+    end
 
     config.hostmanager.enabled = true
     config.hostmanager.manage_host = true
