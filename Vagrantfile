@@ -1,5 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+require 'yaml'
+CONFSBOX = YAML.load(File.open(File.join(File.dirname(__FILE__), "Scotchbox.yaml"), File::RDONLY).read)
+ENV['VAGRANT_DEFAULT_PROVIDER'] = CONFSBOX["provider"] ||= "virtualbox"
 
 Vagrant.configure("2") do |config|
 
@@ -16,16 +19,15 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder ".", "/vagrant", disabled: true
 
     config.vm.box = "scotch/box"
-    config.vm.network "private_network", ip: "192.168.33.10"
+    config.vm.network "private_network", ip: CONFSBOX['ip']
     config.vm.hostname = "scotchbox"
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
-    
     # Optional NFS. Make sure to remove other synced_folder line too
     #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
     config.vm.provider :virtualbox do |vbox|
         # Set server memory
-        vbox.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "2"]
+        vbox.customize ["modifyvm", :id, "--memory", CONFSBOX['memory'], "--cpus", CONFSBOX['cpus']]
         # Set the timesync threshold to 100 seconds, instead of the default 20 minutes.
         # If the clock gets more than 15 minutes out of sync (due to your laptop going
         # to sleep for instance, then some 3rd party services will reject requests.
