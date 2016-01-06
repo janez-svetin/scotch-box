@@ -4,7 +4,7 @@ memory: 1024
 cpus: 2
 provider: virtualbox
 
-# folders:
+# folders + sites (Homestead)
 #     - map: .
 #       to: /var/www
 #       site: scotch.box

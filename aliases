@@ -3,7 +3,18 @@ alias ...="cd ../.."
 
 alias h='cd ~'
 alias c='clear'
-alias artisan='php artisan'
 
+alias artisan='php artisan'
 alias phpspec='vendor/bin/phpspec'
 alias phpunit='vendor/bin/phpunit'
+
+alias mcatch='mailcatcher --http-ip=0.0.0.0'
+
+alias a2ail='cd /etc/apache2/sites-available/'
+alias a2ini='cd /etc/php5/apache2/conf.d'
+alias a2rst='sudo service apache2 restart'
+
+alias nanohost='sudo nano /etc/hosts'
+alias nanoconf='sudo nano /etc/apache2/sites-available/000-default.conf'
+alias nanossl='sudo nano /etc/apache2/sites-available/default-ssl.conf'
+
