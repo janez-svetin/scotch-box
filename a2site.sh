@@ -7,8 +7,8 @@ cat << VIRTUALHOSTCONF > /etc/apache2/sites-available/$1.conf
     ServerAlias    *.$1
     DocumentRoot   $2
     DirectoryIndex index.php index.html
-    ErrorLog  \${APACHE_LOG_DIR}/error.log
-    CustomLog \${APACHE_LOG_DIR}/access.log combined
+    ErrorLog  \${APACHE_LOG_DIR}/$1_error.log
+    CustomLog \${APACHE_LOG_DIR}/$1_access.log combined
 </VirtualHost>
 VIRTUALHOSTCONF
 

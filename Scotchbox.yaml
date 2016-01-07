@@ -4,14 +4,14 @@ memory: 1024
 cpus: 2
 provider: virtualbox
 
-# folders + sites (Homestead)
+# folders:
 #     - map: .
 #       to: /var/www
-#       site: scotch.box
-#       root: public
-
-databases:
-    - scotchbox
+# sites:
+#     - map: scotch.box
+#       to: /var/www/public
+# databases:
+#     - scotchbox
 
 variables:
     - key: APP_ENV

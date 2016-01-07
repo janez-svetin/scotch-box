@@ -1,4 +1,4 @@
-Scotch MultiBox
+Scotch *Multi*Box
 ===============
 
 ## Check out the official docs at: [box.scotch.io][16]

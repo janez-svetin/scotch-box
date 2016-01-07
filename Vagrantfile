@@ -40,23 +40,21 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
     # Optional NFS. Make sure to remove other synced_folder line too
     #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
-    if CONFSBOX.include? 'folders'
-      CONFSBOX["folders"].each do |folder|
-        mount_opts = []
-        if (folder["type"] == "nfs")
-            mount_opts = folder["mount_options"] ? folder["mount_options"] : ['actimeo=1']
+    if CONFSBOX.include? 'projects'
+      CONFSBOX["projects"].each do |project|
+        mount_opts = ["dmode=777", "fmode=666"]
+        if (project["mount"] == "nfs")
+            mount_opts = project["mount_options"] ? project["mount_options"] : ['actimeo=1']
         end
         # For b/w compatibility keep separate 'mount_opts', but merge with options
-        options = (folder["options"] || {}).merge({ mount_options: mount_opts })
-        # Double-splat (**) operator only works with symbol keys, so convert
-        options.keys.each{|k| options[k.to_sym] = options.delete(k) }
-        config.vm.synced_folder folder["map"], folder["to"], type: folder["type"] ||= nil, **options
+        mount_options = ({}).merge({ mount_options: mount_opts })
+        config.vm.synced_folder project["map"], project["to"], type: project["mount"] ||= nil, **mount_options
 
-        config.hostmanager.aliases.push folder['site']
+        config.hostmanager.aliases.push project['site']
 
-        config.vm.provision folder["site"], type: "shell" do |sh|
+        config.vm.provision project["site"], type: "shell" do |sh|
             sh.path = "a2site.sh"
-            sh.args = folder["site"] + " " + folder["to"] + "/" + folder["root"]
+            sh.args = [ project["site"] , project["to"] +"/"+ project["root"] ]
             sh.privileged = true
             sh.keep_color = true
         end
