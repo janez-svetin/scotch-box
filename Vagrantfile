@@ -58,6 +58,18 @@ Vagrant.configure("2") do |config|
             sh.privileged = true
             sh.keep_color = true
         end
+
+        if project.has_key?("db")
+            config.vm.provision project["db"], type: "shell" do |sh|
+                sh.path = "mydb.sh"
+                sh.args = project["db"]
+                if project.has_key?("sql")
+                    sh.args += " "+ project["to"] +"/"+ project["sql"]
+                end
+                sh.privileged = true
+                sh.keep_color = true
+            end
+        end
       end
     end
 
