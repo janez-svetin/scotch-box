@@ -8,14 +8,14 @@
 
     <!-- Meta -->
     <meta charset="utf-8">
-    <title>Scotch Box ♥</title>
+    <title>Project Scaffold</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://scotch.io/favicon.ico">
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="favicon.ico">
 
     <!-- Styles -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -48,35 +48,6 @@
         section {
             position: relative;
         }
-        #topper {
-            margin-top: 51px;
-            height: 450px;
-            text-align: center;
-        }
-        #topper svg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
-        #topper h1 {
-            position: absolute;
-            color: #fff;
-            left: 50%;
-            top: 50%;
-            -o-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            margin: 0;
-            font-size: 80px;
-            text-transform: uppercase;
-        }
-        #topper h1 i {
-            color: rgb(255, 157, 157);
-        }
         article {
             padding: 50px 0;
         }
@@ -84,7 +55,7 @@
             background: #e3e3e3;
         }
         article .content .wrap {
-            background: rgba(255, 27, 53, 0.8);
+            background: #ccc;
             margin-bottom: 50px;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -101,18 +72,6 @@
         }
         article .fa-check {
             color: rgb(0, 179, 64);
-        }
-        #site-footer {
-            background: #05003D;
-            padding: 100px 0;
-            color: #e3e3e3;
-            font-size: 35px;
-        }
-        #site-footer a {
-            color: #fff;
-        }
-        #site-footer a:hover {
-            color: rgb(144, 255, 184);
         }
     </style>
 
@@ -457,17 +416,6 @@
 
         </div>
     </article>
-
-    <footer id="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="http://box.scotch.io">Scotch Box</a> by <a href="http://scotch.io">scotch.io</a>.
-                </div>
-            </div>
-        </div>
-    </footer>
-
 
     <!-- Scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
