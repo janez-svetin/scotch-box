@@ -8,30 +8,7 @@
 
     <!-- Meta -->
     <meta charset="utf-8">
-    <!--
-       d888888o.       ,o888888o.        ,o888888o. 8888888 8888888888 ,o888888o.    8 8888        8
-     .`8888:' `88.    8888     `88.   . 8888     `88.     8 8888      8888     `88.  8 8888        8
-     8.`8888.   Y8 ,8 8888       `8. ,8 8888       `8b    8 8888   ,8 8888       `8. 8 8888        8
-     `8.`8888.     88 8888           88 8888        `8b   8 8888   88 8888           8 8888        8
-      `8.`8888.    88 8888           88 8888         88   8 8888   88 8888           8 8888        8
-       `8.`8888.   88 8888           88 8888         88   8 8888   88 8888           8 8888        8
-        `8.`8888.  88 8888           88 8888        ,8P   8 8888   88 8888           8 8888888888888
-    8b   `8.`8888. `8 8888       .8' `8 8888       ,8P    8 8888   `8 8888       .8' 8 8888        8
-    `8b.  ;8.`8888    8888     ,88'   ` 8888     ,88'     8 8888      8888     ,88'  8 8888        8
-     `Y8888P ,88P'     `8888888P'        `8888888P'       8 8888       `8888888P'    8 8888        8
-
-    8 888888888o       ,o888888o.  `8.`8888.      ,8'
-    8 8888    `88.  . 8888     `88. `8.`8888.    ,8'
-    8 8888     `88 ,8 8888       `8b `8.`8888.  ,8'
-    8 8888     ,88 88 8888        `8b `8.`8888.,8'
-    8 8888.   ,88' 88 8888         88  `8.`88888'
-    8 8888888888   88 8888         88  .88.`8888.
-    8 8888    `88. 88 8888        ,8P .8'`8.`8888.
-    8 8888      88 `8 8888       ,8P .8'  `8.`8888.
-    8 8888    ,88'  ` 8888     ,88' .8'    `8.`8888.
-    8 888888888P       `8888888P'  .8'      `8.`8888.
-    -->
-    <title>Scotch Box ♥ A Vagrant LAMP Stack for Beginners That Just Works</title>
+    <title>Scotch Box ♥</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -140,33 +117,6 @@
 
 </head>
 <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Scotch Box</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li><a href="http://box.scotch.io">Docs</a></li>
-                    <li><a href="http://github.com/scotch-io/scotch-box">Star on GitHub</a></li>
-                    <li><a href="http://scotch.io">Scotch.io</a></li>
-                    <li><a href="https://twitter.com/scotch_io">@scotch_io</a></li>
-                    <li><a href="https://twitter.com/nickforthought">@nickforthought</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <section id="topper" style="background-image: url('data:image/svg+xml;base64,<?php echo base64_encode('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs id="defs4"><filter color-interpolation-filters="sRGB" id="filter3115"><feTurbulence type="fractalNoise" numOctaves="1" baseFrequency="0.9" id="feTurbulence3117"/><feColorMatrix result="result5" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6 -4.15 " id="feColorMatrix3119"/><feComposite in2="result5" operator="in" in="SourceGraphic" result="result6" id="feComposite3121"/><feMorphology in="result6" operator="dilate" radius="1" result="result3" id="feMorphology3123"/></filter></defs><rect width="100%" height="100%" x="0" y="0" id="rect2985" fill="#000000"/><rect width="100%" height="100%" x="0" y="0" id="rect2985" style="fill:#FF4343;filter:url(#filter3115)"/></svg>'); ?>');">
-        <h1>Welcome to<br>Scotch Box 2.5 <i class="fa fa-heart"></i></h1>
-    </section>
 
     <article>
         <div class="container">
