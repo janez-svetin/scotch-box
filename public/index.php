@@ -37,6 +37,7 @@
         body {
             font-family: 'Pathway Gothic One', sans-serif;
             height: 2000px;
+            font-size: 10px;
         }
         a {
             -webkit-transition: all 310ms ease;
